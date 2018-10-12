@@ -96,7 +96,7 @@ disqus:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: lisongs1995
-    repo: lisongsong1995.github.io
+    repo: blog_commit
     oauth:
         client_id:  93e28642eef135373a15
         client_secret:  5e3a2c165dac210cb0cb21d610d8a30e1f2fc0fa 
