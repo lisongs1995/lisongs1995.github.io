@@ -101,7 +101,7 @@ gitment:
         client_id:  93e28642eef135373a15
         client_secret:  5e3a2c165dac210cb0cb21d610d8a30e1f2fc0fa 
 # https://github.com/gitalk/gitalk#install
-#gitalk:
+gitalk:
     owner: 
     repo: 
     clientID: 
