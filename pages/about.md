@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 阿尔法 松
+keywords: 李松松, Lisongsong
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+热爱编程，热爱生活。
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+技术改变世界。
 
 ## 联系
 

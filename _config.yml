@@ -98,8 +98,8 @@ gitment:
     owner: lisongs1995
     repo: lisongsong1995.github.io
     oauth:
-        client_id: 711861732ec225e6c007
-        client_secret:  1ad8bbc8c040bb43c6948215cc6113c957bacbc4 
+        client_id:  93e28642eef135373a15
+        client_secret:  5e3a2c165dac210cb0cb21d610d8a30e1f2fc0fa 
 # https://github.com/gitalk/gitalk#install
 #gitalk:
     owner: 
