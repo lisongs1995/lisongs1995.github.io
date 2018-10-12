@@ -95,11 +95,11 @@ disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
-    repo: blog-comments
+    owner: lisongs1995
+    repo: lisongsong1995.github.io
     oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+        client_id: 711861732ec225e6c007
+        client_secret:  1ad8bbc8c040bb43c6948215cc6113c957bacbc4 
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: mzlogin
