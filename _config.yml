@@ -98,8 +98,8 @@ gitment:
     owner: lisongs1995
     repo: lisongs1995.github.io
     oauth:
-        client_id:  93e28642eef135373a15
-        client_secret:  5e3a2c165dac210cb0cb21d610d8a30e1f2fc0fa 
+        client_id:  f5126219aaa586167382
+        client_secret:  c3420c2db0f9a9b3fcc973f49e93b7cda982b542
 # https://github.com/gitalk/gitalk#install
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
