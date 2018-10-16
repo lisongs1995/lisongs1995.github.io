@@ -605,9 +605,6 @@ https://github.com
 
 可以将公众号素材用 Markdown 编辑好后，贴到在线排版工具以后，复制到公众号编辑器里即可。有多种页面主题和代码主题可选择。
 
-我维护的工具地址：<https://md.mazhuang.org>
-
-![微信公众号](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/wechat-markdown.png)
 
 ### 更多
 
@@ -622,8 +619,6 @@ https://github.com
 
 以上功能基本都可以用 VSCode + 插件 Markdown Preview Enhanced 实现。
 
-另外可以参考我以前的一篇博客 [关于 Markdown 的一些奇技淫巧](https://mazhuang.org/2017/09/01/markdown-odd-skills/)。
-
 ## 参考
 
 * [Markdown: Syntax - DARING FIREBALL](https://daringfireball.net/projects/markdown/syntax)
@@ -633,6 +628,3 @@ https://github.com
 
 ---
 
-欢迎关注我的微信公众号，接收 markdown-intro 最新动态。
-
-<div align="center"><img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/></div>
