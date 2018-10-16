@@ -8,28 +8,59 @@ set -o pipefail
 
 trap "echo \$LINENO has occured err !!!" ERR
 
-message="$1"
+CURRENT=$(cd $(dirname $BASH_SOURCE) && pwd -P)
 
-[ -z "$message" ] && message="update"
+function upload() {
 
-git add . 
+  local message="$1"
+  [ -z "$message" ] && message="update"
+  git add . 
+  echo "list all added files (y/n)? "
+  read ans
 
-echo "list all added files (y/n)? "
-read ans
-
-if [ "$ans" ==  "y" -o "$ans" == "Y" -o "$ans" == "yes" ]
-then
+  if [ "$ans" ==  "y" -o "$ans" == "Y" -o "$ans" == "yes" ]
+  then
     git status
 
-elif [ "$ans" == "n" -o "$ans" == "N"  -o "$ans" == "no" ]
-then
+  elif [ "$ans" == "n" -o "$ans" == "N"  -o "$ans" == "no" ]
+  then
     echo "added ..."
-else
+  else
     echo "wrong args"
-fi
+  fi
+  git commit -m "$message"
+  git push origin master && echo "successfully pushed !!"
 
-git commit -m "$message"
+}
 
-git push origin master && echo "successfully pushed !!"
+function watch() {
+
+  jekyll s watch  
+}
 
 
+function main() {
+
+  if [ $# -ne 1 -a $# -ne 2 ]
+  then
+    echo "wrong args"
+    exit 1
+  fi
+  case $1 in 
+    "upload")
+      if [ $2 -ne 2 ]
+      then
+        echo "given two args"
+        exit 1
+      fi
+      upload $2
+      ;;
+    "watch")
+      watch
+      ;;
+    *)
+    echo "error args !!!"
+  esac
+}
+
+main $@
