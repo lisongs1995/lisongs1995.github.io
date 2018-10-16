@@ -1,19 +1,10 @@
-- name: Software Engineer Keywords
+- name: Machine Learning Keywords
   keywords:
       - Java
       - C++
       - Python
-      - Design Patterns
 
-- name: Mobile Developer Keywords
+- name: Deep Learning Keywords
   keywords:
-      - Android
-      - Reverse Engineering
+      - nlp
 
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
