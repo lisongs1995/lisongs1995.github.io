@@ -290,6 +290,7 @@ Markdown 支持行内式链接和引用式链接。
 
 ```
 ![Alt text](https://www.baidu.com "baidu")
+
 ```
 
 **预览效果：**
