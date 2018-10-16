@@ -64,12 +64,11 @@ function main() {
       watch
       ;;
     "link-submit"|"l")
+      link_submit && echo "successfully submit url to baidu"
       if [ -s "urls.txt" ]
       then
         >urls.txt >/dev/null
       fi
-
-      link-submit && echo "successfully submit url to baidu"
       ;;
     *)
     echo "error args !!!"
