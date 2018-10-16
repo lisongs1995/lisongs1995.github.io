@@ -12,6 +12,8 @@ permalink: /about/
 
 技术改变世界。
 
+北邮信息与通信工程在读研究生
+
 ## 联系
 
 {% for website in site.data.social %}
