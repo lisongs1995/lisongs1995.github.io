@@ -47,7 +47,7 @@ function main() {
     exit 1
   fi
   case $1 in 
-    "upload")
+    "upload"|"u")
       if [ $2 -ne 2 ]
       then
         echo "given two args"
@@ -55,7 +55,7 @@ function main() {
       fi
       upload $2
       ;;
-    "watch")
+    "watch"|"w")
       watch
       ;;
     *)
