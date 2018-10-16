@@ -289,18 +289,18 @@ Markdown 支持行内式链接和引用式链接。
 **Markdown：**
 
 ```
-![Alt text](https://www.baidu.com "baidu")
+![Alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png "baidu")
 
 ```
 
 **预览效果：**
 
-![Alt text](https://www.baidu.com)
+![Alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png)
 
 **对应 HTML：**
 
 ```html
-<img src="https://www.baidu.com" alt="Alt text" title="baidu">
+<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" alt="Alt text" title="baidu">
 ```
 
 ### 列表
