@@ -6,21 +6,18 @@ description: 一份简明的 Markdown 笔记与教程
 keywords: Markdown, VSCode
 ---
 
-为部门内知识分享准备的素材，记录了 Markdown 的优点、应用场景和编辑工具，介绍了标准语法与扩展语法，以及一些应用 Markdown 的奇技淫巧。个人使用 Markdown 的经验持续补充中，最新完整版请参见
-
-<https://github.com/mzlogin/markdown-intro>
+下面介绍了markdown的语法，以备自己查用。
 
 ---
 
-自从 2014 年左右接触到 Markdown 以来，对它的使用就一发而不可收拾。从最开始使用它在 GitHub Pages 里写博客，到用它编辑项目的 README 文件，再到撰写开发文档，编辑微信公众号文章和邮件内容等等，这期间也见证了它在各类平台和网站上的普及和被原生支持，可以说，Markdown 如今已经渗透了我在技术和网络活动的方方面面，成为了我撰写文本文档的首选。
+介绍一下个人初遇markdown的经历。之前在论坛看到大家在讨论不同平台上makrdown的工具的推荐，第一次听到这个名词，当时自己还在研一上学期。一直用的ppt、word，头一回听说还有这么高大上的工具，第一次的时候使用的是typora，特别喜欢markdown所展现出来的格式。后来每次报告、组报、笔记我都喜欢写成一个markdown文件，被我带的实验室的小伙伴也开始用。事实上，这也的确是一个款比较geek的编写文本方式。
+
 
 那么首先我们一起来看一下它的「定义」：
 
 > Markdown 是一种轻量级标记语言，创始人为 John Gruber。它允许人们「使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档」。——维基百科
 
-本文档的目的不在于面面俱到地介绍 Markdown，只是作为我对其理解的笔记整理，希望能同时帮助一些对 Markdown 感兴趣的人快速上手，或是作为一个工具，供对其已经有所了解的人在需要时参考。
-
-接下来请随我一起深入了解这门并不神秘的实用标记语言。
+我特别喜欢用markdown写公式，代码做成文档以备日后查看。这是一种很geek的方式，可以解放你的鼠标，尝试一种不同的方式去书写。哈哈～
 
 **目录**
 
@@ -51,7 +48,9 @@ keywords: Markdown, VSCode
 
     V2EX、光谷社区
 
-个人感觉比较遗憾的一点是各平台可能采用不同语言实现的 Markdown 解析引擎，或采用同一解析引擎的不同版本，而且可能有不同程度的定制与扩展，这导致在不同平台上使用 Markdown 写作时体验并不完全一致。不过幸好对于大家公认的一些标准语法，各家都是支持的。
+**需要提及的是**
+
+> 各平台采用Markdown 解析引擎相同语法解析的格式可能略有差别，分别有不同程度的定制与扩展，这导致在不同平台上使用Markdown写作时惯用快捷键并不完全一致。不过幸好对于公认的一些标准语法，都是支持的，遇到问题的时候可以查一查Google或者看一下帮助文档。
 
 ### 编辑工具
 
@@ -295,12 +294,12 @@ Markdown 支持行内式链接和引用式链接。
 
 **预览效果：**
 
-![Alt text](https://mazhuang.org/favicon.ico "favicon")
+![Alt text](https://www.baidu.com "baidu")
 
 **对应 HTML：**
 
 ```html
-<img src="https://mazhuang.org/favicon.ico" alt="Alt text" title="favicon">
+<img src="https://www.baidu.com" alt="Alt text" title="baidu">
 ```
 
 ### 列表
@@ -499,14 +498,6 @@ Markdown 标记语言的目的不是替代 HTML，也不是发明一种更便捷
 </ul>
 ```
 
-如果是在 GitHub / GitLab 的 Issue 里，会附赠任务完成比例提示效果：
-
-![task list 1](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/task-list-1.png)
-
-还可以直接在网页上拖动调整顺序，勾选和取消勾选。
-
-![task list 2](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/task-list-2.png)
-
 ### 删除线
 
 **Markdown：**
@@ -583,27 +574,19 @@ https://github.com
 
 有部分网站和编辑器实现了对 Markdown 里流程图和时序图的支持，比如我们使用的项目管理工具 TAPD 的在线编辑器，还有 VSCode + 插件 Markdown Preview Enhanced 等。
 
-以我们使用的项目管理工具 TAPD 的在线编辑器为例：
-
 ![流程图](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-flowchart.png)
 
 ![时序图](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-seq.png)
 
 ### 插入数学公式
 
-仍然以 TAPD 为例：
-
-![数学公式](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-math.png)
+$\sum_{i=1}^N{i} = \frac{n*(n+1)}{2} $
 
 应该是利用 JavaScript 支持了 LaTeX 公式语法。
 
 ### 用 Markdown 做 PPT
 
 有专门的工具 [Marp](https://github.com/yhatt/marp)，另外使用 VSCode + 插件 Markdown Preview Enhanced 也可以实现。
-
-### 用 Markdown 写微信公众号
-
-可以将公众号素材用 Markdown 编辑好后，贴到在线排版工具以后，复制到公众号编辑器里即可。有多种页面主题和代码主题可选择。
 
 
 ### 更多
