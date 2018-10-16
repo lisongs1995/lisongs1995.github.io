@@ -10,14 +10,14 @@ keywords: Markdown, VSCode
 
 ---
 
-介绍一下个人初遇markdown的经历。之前在论坛看到大家在讨论不同平台上makrdown的工具的推荐，第一次听到这个名词，当时自己还在研一上学期。一直用的ppt、word，头一回听说还有这么高大上的工具，第一次的时候使用的是typora，特别喜欢markdown所展现出来的格式。后来每次报告、组报、笔记我都喜欢写成一个markdown文件，被我带的实验室的小伙伴也开始用。事实上，这也的确是一个款比较geek的编写文本方式。
+介绍一下个人初遇markdown的经历。之前在论坛看到大家在讨论不同平台上makrdown的工具的推荐，第一次听到这个名词，当时自己还在研一上学期。一直用的ppt、word，头一回听说还有这么高大上的工具，第一次的时候使用的是typora，特别喜欢markdown所展现出来的格式。后来每次报告、组报、笔记我都喜欢写成一个markdown文件，被我带的实验室的小伙伴也开始用。事实上，这也的确是一个比较geek的编写文本方式。
 
 
 那么首先我们一起来看一下它的「定义」：
 
 > Markdown 是一种轻量级标记语言，创始人为 John Gruber。它允许人们「使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档」。——维基百科
 
-我特别喜欢用markdown写公式，代码做成文档以备日后查看。这是一种很geek的方式，可以解放你的鼠标，尝试一种不同的方式去书写。哈哈～
+我特别喜欢用markdown写公式，代码做成文档以备日后查看。等到得心应手，而不必去考虑各种格式的时候，这才是写文档的最初目的。
 
 **目录**
 
@@ -245,41 +245,41 @@ Markdown 支持行内式链接和引用式链接。
 **Markdown：**
 
 ```
-行内式 [博客](https://mazhuang.org "我的个人博客") 链接，带 title。
+行内式 [博客](https://www.lss-bupt.com "我的个人博客") 链接，带 title。
 
-行内式 [GitHub](https://github.com/mzlogin) 链接。
+行内式 [GitHub](https://github.com/lisongs1995) 链接。
 
 引用式 [博客][1] 链接。
 
 引用式 [GitHub][2] 链接，带 title。
 
-[1]: https://mazhuang.org
-[2]: https://github.com/mzlogin "我的 GitHub 主页"
+[1]: https://www.lss-bupt.com
+[2]: https://github.com/lisongs1995 "我的 GitHub 主页"
 ```
 
 **预览效果：**
 
-行内式 [博客](https://mazhuang.org "我的个人博客") 链接，带 title。
+行内式 [博客](https://www.lss-bupt.com "我的个人博客") 链接，带 title。
 
-行内式 [GitHub](https://github.com/mzlogin) 链接。
+行内式 [GitHub](https://github.com/lisongs1995) 链接。
 
 引用式 [博客][1] 链接。
 
 引用式 [GitHub][2] 链接，带 title。
 
-[1]: https://mazhuang.org
-[2]: https://github.com/mzlogin "我的 GitHub 主页"
+[1]: https://www.lss-bupt.com
+[2]: https://github.com/lisongs1995 "我的 GitHub 主页"
 
 **对应 HTML：**
 
 ```html
-<p>行内式 <a href="https://mazhuang.org" title="我的个人博客">博客</a> 链接，带 title。</p>
+<p>行内式 <a href="https://www.lss-bupt.com" title="我的个人博客">博客</a> 链接，带 title。</p>
 
-<p>行内式 <a href="https://github.com/mzlogin">GitHub</a> 链接。</p>
+<p>行内式 <a href="https://github.com/lisongs1995">GitHub</a> 链接。</p>
 
-<p>引用式 <a href="https://mazhuang.org">博客</a> 链接。</p>
+<p>引用式 <a href="https://www.lss-bupt.com">博客</a> 链接。</p>
 
-<p>引用式 <a href="https://github.com/mzlogin" title="我的 GitHub 主页">GitHub</a> 链接，带 title。</p>
+<p>引用式 <a href="https://github.com/lisongs1995" title="我的 GitHub 主页">GitHub</a> 链接，带 title。</p>
 ```
 
 ### 图片
@@ -289,7 +289,7 @@ Markdown 支持行内式链接和引用式链接。
 **Markdown：**
 
 ```
-![Alt text](https://mazhuang.org/favicon.ico "favicon")
+![Alt text](https://www.baidu.com "baidu")
 ```
 
 **预览效果：**
