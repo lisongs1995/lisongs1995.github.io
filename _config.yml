@@ -10,7 +10,7 @@ description: "李松松的个人博客"
 keywords:  机器学习、深度学习、北邮
 timezone: Asia/Beijing
 encoding: "utf-8"
-side_bar_repo_limit: 5
+side_bar_repo_limit: 1
 
 # ---------------- #
 #      Author      #
