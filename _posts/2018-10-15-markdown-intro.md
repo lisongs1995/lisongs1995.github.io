@@ -295,7 +295,7 @@ Markdown 支持行内式链接和引用式链接。
 
 **预览效果：**
 
-![Alt text](https://www.baidu.com "baidu")
+![Alt text](https://www.baidu.com)
 
 **对应 HTML：**
 

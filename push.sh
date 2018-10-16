@@ -1,5 +1,12 @@
 #!/bin/bash
+# usage : bash push.sh message
+# usage : bash push.sh
+# desciption : update boke
 
+set -o pipefail
+#set -x
+
+trap "echo \$LINENO has occured err !!!" ERR
 
 message="$1"
 
@@ -7,7 +14,7 @@ message="$1"
 
 git add . 
 
-echo "list all added files ?(y/n) "
+echo "list all added files (y/n)? "
 read ans
 
 if [ "$ans" ==  "y" -o "$ans" == "Y" -o "$ans" == "yes" ]
@@ -23,6 +30,6 @@ fi
 
 git commit -m "$message"
 
-git push origin master
+git push origin master && echo "successfully pushed !!"
 
 
