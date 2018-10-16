@@ -39,6 +39,11 @@ function watch() {
 }
 
 
+function link_submit(){
+
+  curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=www.lss-bupt.com&token=Xsw8cxgKb3zszvBS" 
+}
+
 function main() {
 
   if [ $# -ne 1 -a $# -ne 2 ]
@@ -57,6 +62,14 @@ function main() {
       ;;
     "watch"|"w")
       watch
+      ;;
+    "link-submit"|"l")
+      if [ -s "urls.txt" ]
+      then
+        >urls.txt >/dev/null
+      fi
+
+      link-submit && echo "successfully submit url to baidu"
       ;;
     *)
     echo "error args !!!"
