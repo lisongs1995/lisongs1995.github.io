@@ -581,7 +581,7 @@ https://github.com
 
 ### 插入数学公式
 
-$\sum_{i=1}^N{i} = \frac{n*(n+1)}{2} $
+$$ \sum_{i=1}^N{i} = \frac{n*(n+1)}{2}
 
 应该是利用 JavaScript 支持了 LaTeX 公式语法。
 
