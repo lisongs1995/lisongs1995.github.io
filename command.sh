@@ -53,7 +53,7 @@ function main() {
   fi
   case $1 in 
     "upload"|"u")
-      if [ $2 -ne 2 ]
+      if [ -z  "$2" ]
       then
         echo "given two args"
         exit 1
