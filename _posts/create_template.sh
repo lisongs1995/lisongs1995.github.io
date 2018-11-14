@@ -11,9 +11,16 @@ set -o nounset
 	exit 1
 }
 
+CURRENT=$(cd $(dirname $BASH_SOURCE) && pwd -P)
+IMAGE="${CURRENT%/*}/images/posts"
+
 DATE=`date +%Y-%m-%d`
 keyword=$@
 title=`echo $keyword | tr ' ' '-'`
+if [ ! -d "$IMAGE/$title" ]
+then
+	mkdir "$IMAGE/$title"
+fi
 url="${DATE}-${title}.md"
 
 [ -f template.md ] && cp template.md $url
