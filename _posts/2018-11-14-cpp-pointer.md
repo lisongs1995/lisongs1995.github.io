@@ -3,7 +3,7 @@ layout: post
 title: C++ 指针的疑惑
 categories: C++, poniter
 description: 指针的函数调用与初始化问题
-keywords: C++, pointer
+keywords: C++  pointer
 ---
 
 ### 谨记
