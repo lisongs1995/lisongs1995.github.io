@@ -69,7 +69,9 @@ Graph = defaultdict(dict) # dict[int, dict[int, int]]
 - 每次都找边权值最小的某个顶点加入最小生成树的集合,  并且将该边的信息存入adjvex数组中(使用下标i到adjvex[i]做一个顶点i与顶点adjvex[i]之间的映射)
 - 加入该顶点后生成树到其余各点的距离改变, 因此需要更新lowcost数组信息。
 
-```C++
+prim.cpp
+
+```c++
 #include <bits/stdc++.h>
 #define INF INT_MAX   // climits.h
 #define MAXVEX 4 //联通图中最多不超过的顶点数量
@@ -83,13 +85,13 @@ vector<pair<int, int> > prim(Graph& g, int vertexNum){
     adjvex[0] = 0;
     for(size_t i=1; i < vertexNum; i++){
         if(g[0].find(i) != g[0].end()) // 顶点0与顶点i是否存在边, 不存在则默认为无穷大
-            lowcost[i] = G[0][i];
+            lowcost[i] = g[0][i];
         else
             lowcost[i] = INF;
         adjvex[i] = 0; //默认初始时候只有顶点0, 从顶点0到其余各个顶点
     }
     for(size_t i=1; i<vertexNum; i++){
-        int min = INT_MAX; //记录每次找到的最小权值边的权值
+        int min = INF; //记录每次找到的最小权值边的权值
         int worker = 0; // 遍历节点临时变量
         int minIndex = 0; //最小权值的顶点
         while(worker < vertexNum) {
@@ -102,7 +104,7 @@ vector<pair<int, int> > prim(Graph& g, int vertexNum){
         lowcost[minIndex] = 0; //将minIndex加入到生成树集合中,所以生成树到该顶点的距离为0.
         printf("%d --> %d \n", adjvex[minIndex], minIndex);
         res.push_back(pair<int, int> (adjvex[minIndex], minIndex));
-        for(auto it=G[minIndex].begin(); it!=G[minIndex].end(); it++){
+        for(auto it=g[minIndex].begin(); it!=g[minIndex].end(); it++){
             int to = it->first;
             int weight = it->second;
             if(lowcost[to]!=0 && weight<lowcost[to]){
@@ -123,14 +125,67 @@ int main(){
     g[1].insert(pair<int, int>(3,5));   
     g[2].insert(pair<int, int>(3,4));   
     g[3].insert(pair<int, int>(0,1));  
-    prim(Graph& g, int vertexNum);
+    prim(g, vertexNum);
     return 0;
 }
 ```
 
-![1542683581764](/images/posts/span-tree/prim-cpp-output.jpg)
+ps: g++ is aliased to `g++ -std=c++11'
 
+![prim c++输出结果](/images/posts/span-tree/prim-cpp-output.jpg)
 
+prim.py
 
+```python
+from collections import defaultdict
+import sys
 
+INF = sys.maxsize  
+def prim(graph, vertexNum):
+    """
+    :type graph: dict[int, dict[int, int]]
+    :type vertexNum: int
+    :rtype list[tuple[int]]
+    """
+    lowcost = [INF if i!=0 else 0 for i in range(vertexNum)]
+    adjvex = [0 for i in range(vertexNum)]
+    res = []
+    for key in graph[0].keys():
+        lowcost[key] = graph[0][key]
+    for i in range(1, vertexNum):
+        min = INF
+        worker = 0
+        minIndex = 0
+        while worker <vertexNum:
+            if lowcost[worker]!=0 && lowcost[worker] < min:
+                min = lowcost[worker]
+                minIndex = worker
+            worker += 1
+        lowcost[minIndex] = 0
+        res.append((adjvex[minIndex], minIndex))
+        for vertex, weight in graph[minIndex].items():
+            if lowcost[vertex] != 0 and weight < lowcost[vertex]:
+                lowcost[vertex] = weight
+                adjvex[vertex] = minIndex
+    return res
+if __name__ == "__main__":
+    # init graph one
+    graph = defaultdict(dict)
+    graph[0] = {1:3, 2:4}
+    graph[1] = {2:2, 3:5}
+    graph[2] = {3:4}
+    graph[3] = {0:1}
+    #init graph two
+    #graph = {
+    #    {1:3, 2:4},
+    #    {2:2, 3:5},
+    #    {3:4},
+    #    {0:1}
+    #}
+    vertexNum = 4
+    prim(graph, vertexNum)
+     
+```
+
+![prim python输出结果](/images/posts/span-tree/prim-python-putput.jpg)
 
