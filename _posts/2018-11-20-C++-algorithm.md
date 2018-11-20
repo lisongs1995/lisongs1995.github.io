@@ -63,7 +63,7 @@ Graph = defaultdict(dict) # dict[int, dict[int, int]]
 
 ### prim算法
 
-如上面所述。
+如上述所示。
 
 - 初始化一个顶点, 作为最小生成树, 建立一个数组lowcost保存该顶点与其余各点的**距离**。
 - 每次都找边权值最小的某个顶点加入最小生成树的集合,  并且将该边的信息存入adjvex数组中(使用下标i到adjvex[i]做一个顶点i与顶点adjvex[i]之间的映射)
@@ -190,3 +190,51 @@ if __name__ == "__main__":
 
 ![prim python输出结果](/images/posts/span-tree/prim-python-output.jpg)
 
+### Kruskal算法
+
+通过对边按照权值进行排序, 每次找到最小权值的边, 如果该边并入不构成回路的话,则将该边并入到当前生成树中。
+
+此处使用**并查集**来防止构成环。
+
+kruskal.cpp
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+#define MAXSIZE 4
+struct Edge{
+    int from, to;
+    int weight;
+};
+int Find(int* parent, int x){
+    while(parent[x]>=0)
+        x = parent[x];
+    return x;
+}
+int parent[MAXSIZE]; //union find set
+void kruskal(Edge* edgs, int edgesNum, int vertexNum){
+    sort(edges, edges+edgesNum, [](const Edge& a, const Edge& b){
+        return a.weight < b.weight;
+    });
+    for(size_t i=0; i<vertexNum; i++){
+        int root_a = Find(parent, edges[i].a);
+        int root_b = Find(parent, edges[i].b);
+        if(root_a != root_b){
+            parent[root_b] = root_a // union
+            printf("%d --> %d :%d \n", edges[i].a, edges[i].b, edges[i].weight);
+    	}
+    }
+}
+int main(){
+    int vertexNum = 4;
+    Edge edges[] = {
+        {0, 1, 3}, {0, 2, 4}, //0
+        {1, 2, 2}, {1, 3, 5}, //1
+        {2, 3, 4},  //2
+        {3, 0, 1} //3
+    };
+    kruskal(edges, sizeof(edges)/sizeof(Edge), vertexNum);
+}
+```
+
+![kruskal-cpp输出结果](/images/posts/span-tree/kruskal-cpp-output.jpg)
