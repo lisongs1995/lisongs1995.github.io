@@ -73,7 +73,7 @@ prim.cpp
 
 ```c++
 #include <bits/stdc++.h>
-#define INF INT_MAX   // climits.h
+#define INF INT_MAX   // climits
 #define MAXVEX 4 //联通图中最多不超过的顶点数量
 using namespace std;
 typedef map<int, map<int, int> > Graph;
