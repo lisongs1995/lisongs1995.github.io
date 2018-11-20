@@ -157,11 +157,12 @@ def prim(graph, vertexNum):
         worker = 0
         minIndex = 0
         while worker <vertexNum:
-            if lowcost[worker]!=0 && lowcost[worker] < min:
+            if lowcost[worker]!=0 and lowcost[worker] < min:
                 min = lowcost[worker]
                 minIndex = worker
             worker += 1
         lowcost[minIndex] = 0
+        print("%s --> %s" %(adjvex[minIndex], minIndex))
         res.append((adjvex[minIndex], minIndex))
         for vertex, weight in graph[minIndex].items():
             if lowcost[vertex] != 0 and weight < lowcost[vertex]:
@@ -187,5 +188,5 @@ if __name__ == "__main__":
      
 ```
 
-![prim python输出结果](/images/posts/span-tree/prim-python-putput.jpg)
+![prim python输出结果](/images/posts/span-tree/prim-python-output.jpg)
 
