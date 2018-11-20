@@ -24,4 +24,6 @@ fi
 url="${DATE}-${title}.md"
 
 [ -f template.md ] && cp template.md $url
+mkdir "$IMAGE/$title" && echo "mkdir $IMAGE/$title"
+
 exit $?
