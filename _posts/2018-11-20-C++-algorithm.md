@@ -14,7 +14,7 @@ keywords: prim kruskal 图论 span-tree
 
 在给定的无向图$G=(V,E)$中, $(u,v)$代表连接顶点$u$与顶点$v$的边(即$(u,v) \in E$), 而$w(u, v)$代表该边的权值, 若存在$T$为$E$的子集(即$T \in E$, 且$(V, T)$为树), 使得
 
-​								$w(T) = \sum_{(u,v)\in T}{w(u,v)}$
+​								$w(T) = \sum\limits_{(u,v)\in T}{w(u,v)}$
 
 的$w(T)$最小,  如下图所示, 则此$T$为$G$的最小生成树。
 
@@ -238,3 +238,4 @@ int main(){
 ```
 
 ![kruskal-cpp输出结果](/images/posts/span-tree/kruskal-cpp-output.jpg)
+
