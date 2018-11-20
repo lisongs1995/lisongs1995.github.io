@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C++ 指针初始化的问题
-categories: C++, poniter
+categories: C++ poniter
 description: 指针的函数调用与初始化问题
 keywords: C++  pointer
 ---
