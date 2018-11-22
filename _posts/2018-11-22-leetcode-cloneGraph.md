@@ -32,7 +32,8 @@ Visually, the graph looks like the following:
     0 --- 2
          / \
          \_/
-Note: The information about the tree serialization is only meant so that you can understand error output if you get a wrong answer. You don't need to understand the serialization to solve the problem.
+
+**Note**: The information about the tree serialization is only meant so that you can understand error output if you get a wrong answer. You don't need to understand the serialization to solve the problem.
 
 ### Solution
 #### c++
