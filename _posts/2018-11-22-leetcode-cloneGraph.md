@@ -69,7 +69,8 @@ public:
     }
 };
 ```
-####Python2 解法
+#### Python2 
+
 ```python
  # Definition for a undirected graph node
  # class UndirectedGraphNode:
